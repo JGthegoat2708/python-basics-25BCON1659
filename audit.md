@@ -17,6 +17,13 @@
 | **2** | Python program for calculating fibonacci sequence for a number n. | feat: add fibonacci.py | The AI message is clearer. It is much more concise and immediately states the exact file and feature added without unnecessary words. |
 | **3** | Python program for storing name, roll number and marks in a struct data type like. | feat: add student struct program | The AI message is clearer. It uses standard commit conventions, is punchy, and removes the trailing, incomplete thought at the end of the manual message. |
 
+Claim made in AI README,True?,Evidence or correction made
+factorial.py uses the NumPy library.,No,Correction: Checked the source code. It uses a standard iterative for loop. Removed mention of NumPy.
+struct.py uses @dataclass requiring Python 3.7+,Yes,Evidence: The file begins with from dataclasses import dataclass. Official Python documentation states the dataclasses module was introduced in Python 3.7.
+calculator.py uses the math module.,No,Correction: The script only uses basic built-in arithmetic (x + y). No import math exists. Deleted this claim.
+prime_checker.py handles negative numbers automatically.,No,Correction: The code only evaluates if num > 1. It ignores negative numbers completely rather than handling them. Corrected the description to reflect this.
+Requires pip install -r requirements.txt,No,"Correction: No external dependencies are imported in any of the six scripts, and no requirements.txt file exists in the repo. Deleted this line."
+Requires Python 3.7+ overall.,Yes,"Evidence: Because struct.py is included in this repository and relies on @dataclass, the minimum viable Python version to run the entire suite of programs is indeed 3.7+."
 ## 3. Partner Review Notes
 **Reviewed by:** Jainam
 *   **factorial.py:** The loop logic is sound, but consider adding inline comments to explain how the step of `-1` works in the `range()` function.
